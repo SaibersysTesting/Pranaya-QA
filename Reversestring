@@ -1,0 +1,35 @@
+public class reversestring 
+{
+	public static void main(String[] args)
+	{
+		reverseString("pranaya");
+		String str1 = "java is best programing language";
+		if(str1.indexOf("java") != -1)
+			{
+			System.out.println("String contains java at index:" +str1.indexOf("java"));
+			}
+		if(str1.matches("j.*"))
+				{
+			System.out.println("string starts with j");
+				}
+		
+		String str2="Do you like Java ME or Java EE";
+		{
+			if(str2.lastIndexOf("Java") != -1)
+			{
+				System.out.println("string contains java lastly at :" + str2.lastIndexOf("Java"));
+			}
+			}
+		}
+
+	public static void reverseString(String str)
+	{
+		int end = str.length()-1;
+		if(end >= 0)
+		{
+			System.out.print(str.charAt(end));
+			reverseString(str.substring(0, end));
+		}
+	}
+}
+
